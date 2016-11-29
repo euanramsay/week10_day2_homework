@@ -25,5 +25,11 @@ describe("Basket", function(){
     assert.equal( "toaster", basket.customerBasket[0].name );
   });
 
+  it( "should be able to put a product into customer basket", function(){
+    basket.addToBasket( product );
+    basket.removeFromBasket( product );
+    assert.equal( 0, basket.customerBasket.length );
+  });
+
   
 });
