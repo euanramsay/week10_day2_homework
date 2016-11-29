@@ -15,5 +15,9 @@ describe("Basket", function(){
     assert.equal( "Jimmy White", basket.customerName );
   });
 
+  it( "basket should have a customer loyalty card", function(){
+    assert.equal( true, basket.loyaltyCard );
+  });
+
   
 });
