@@ -14,5 +14,9 @@ describe("Product", function(){
     assert.equal( "toaster", product.name );
   });
 
+  it( "product should have a cost", function(){
+    assert.equal( 29.95, product.cost );
+  });
+
   
 });
