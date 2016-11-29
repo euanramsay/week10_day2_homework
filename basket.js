@@ -1,4 +1,4 @@
-var basket = require("./basket");
+var product = require("./product");
 
 var basket = {
  customerName: "Jimmy White",
@@ -6,5 +6,9 @@ var basket = {
  customerBasket: [],
  finalCost: 0
 };
+
+basket.addToBasket = function( product ){
+  this.customerBasket.push( product );
+  };
 
 module.exports = basket;
