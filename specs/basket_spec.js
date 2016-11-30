@@ -31,5 +31,10 @@ describe("Basket", function(){
     assert.equal( 0, basket.customerBasket.length );
   });
 
+  it( "should be able to get total cost of customer basket", function(){
+    basket.addToBasket( product );
+    assert.equal( 29.95, basket.getTotalCost() );
+  });
+
   
 });
