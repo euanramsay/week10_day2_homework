@@ -49,6 +49,14 @@ describe("Basket", function(){
     assert.equal( 26.955, basket.finalCost );
   });
 
+  it( "should be able to apply additional five percent discount if loyalty card holder", function(){
+    basket.addToBasket( product );
+    basket.getTotalCost();
+    basket.applyTenPercentDiscount();
+    basket.applyFivePercentDiscount();
+    assert.equal( 25.607249999999997, basket.finalCost );
+  });
+
 
   
 });

@@ -30,7 +30,13 @@ basket.getTotalCost = function() {
 basket.applyTenPercentDiscount = function() {
   if (this.finalCost > 20.0) {
     this.finalCost = this.finalCost * 0.9;
-  }
-}
+  };
+};
+
+basket.applyFivePercentDiscount = function() {
+  if (this.loyaltyCard === true) {
+    this.finalCost = this.finalCost * 0.95;
+  };
+};
 
 module.exports = basket;
