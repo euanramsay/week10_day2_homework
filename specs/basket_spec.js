@@ -31,10 +31,24 @@ describe("Basket", function(){
     assert.equal( 0, basket.customerBasket.length );
   });
 
+  it( "should be able to put multiple items into customer basket", function(){
+    basket.addToBasket( product );
+    basket.addToBasket( product );
+    assert.equal( 2, basket.customerBasket.length );
+  });
+
   it( "should be able to get total cost of customer basket", function(){
     basket.addToBasket( product );
     assert.equal( 29.95, basket.getTotalCost() );
   });
+
+  it( "should be able to apply ten percent discount to customer basket", function(){
+    basket.addToBasket( product );
+    basket.getTotalCost();
+    basket.applyTenPercentDiscount();
+    assert.equal( 26.955, basket.finalCost );
+  });
+
 
   
 });

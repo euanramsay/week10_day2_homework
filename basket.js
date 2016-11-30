@@ -16,7 +16,6 @@ basket.removeFromBasket = function( product ){
   this.customerBasket.splice(index, 1);
 };
 
-
 basket.getTotalCost = function() {
   var totalCost = 0;
 
@@ -24,9 +23,14 @@ basket.getTotalCost = function() {
     var value = item.cost;
     totalCost += value;
   };
-
+  this.finalCost = totalCost;
   return totalCost;
-  
 };
+
+basket.applyTenPercentDiscount = function() {
+  if (this.finalCost > 20.0) {
+    this.finalCost = this.finalCost * 0.9;
+  }
+}
 
 module.exports = basket;
